@@ -1,38 +1,254 @@
-.App {
+body {
+  background-color: #292626;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #322f2f;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  
+}
+
+.topnav a {
+  float: left;
+  color: white;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: background-color 0.3s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.topnav a:hover {
+  background-color: #F4CA16;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.topnav a.active {
+  background-color: #F4CA16;
+  color: white; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.topnav-right, .topnav-left {
+  align-items: center;
+}
+
+.side, .title {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: 8vw;
+  margin: 0;
+  width: 70vw;
+}
+
+.side {
+  height: 70vh;
+  width: 100%;
+  border-bottom: solid 4px #B7AD99;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+  position: absolute;
+}
+
+.title {
+  margin: 0px 15vw;
+}
+
+#background1 {
+  background-color: #F4CA16;
+  z-index: 2;
+}
+
+#background2 {
+  background-color: #292626;
+}
+
+.bg {
+  background-image: url('./images/road.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 250px;
+  padding-top: 125vh;
+  margin-top: 60vh;
+  border-bottom: 4px solid #B7AD99;
+}
+
+.container {
+  padding-top: 50px;
+}
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 36px;
+  text-decoration: underline;
+  transform: translateY(-80vh);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  opacity: 70%;
+  margin: 10px 160px;
+  transform: translateY(-80vh);
+  padding: 20px; 
+}
+
+.side-img {
+  width: 150px; 
+  height: auto;
+  border-radius: 100px; 
+  margin-right: 20px; 
+}
+
+
+
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 36px;
+  text-decoration: underline;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  margin: 20px auto;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  width: 500px;
+  height: 600px;
+  background-color: rgb(27, 24, 24);
+  border-radius: 8px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px black;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/*Images*/
+.card1::before {
+  background-image: url(images/justanormalconvo.png);
+  border-bottom: solid 1mm #322f2f;
+}
+.card2::before {
+  background-image: url(images/nextlevelintramurals.png);
+  border-bottom: solid 1mm #322f2f;
+}
+
+.card-content {
   color: white;
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.card-content p {
+  margin: 10px 0;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-button {
+  display: inline-block;
+  padding: 10px 50px;
+  margin-top: 10px;
+  background-color: #F4CA16;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.card-button:hover {
+  background-color: #B7AD99;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1100px) {
+  .about {
+    transform: translateY(-93vh);
   }
-  to {
-    transform: rotate(360deg);
+  
+  .content {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 40px;
+    transform: translateY(-93vh); /* Adjust transform for smaller screens */
   }
+
+  .side-img {
+    width: 100px; 
+    margin-bottom: 5px; 
+    margin-right: 0;
+  }
+
+  .content p {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center; 
+  }
+  .card {
+    width: 370px;
+  }
+  .card-content p {
+    font-size: 14px;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .content {
+    font-size: 18px;
+  }
+
+  .side-img {
+    width: 80px;
+  }
+
 }
