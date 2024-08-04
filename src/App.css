@@ -1,13 +1,26 @@
 body {
-  background-color: #292626;
+  background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+  animation: bg-animation 15s ease infinite;
+  background-size: 200%;
+}
+
+a {
+  color: rgb(162, 0, 255);
+  text-decoration: none;
+}
+
+a:hover {
+  color: whitesmoke;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .topnav {
   display: flex;
   justify-content: space-between;
-  background-color: #322f2f;
+  background-color: rgba(7,7,9,1);
   overflow: hidden;
   position: fixed;
+  font-family: "Rubik", sans-serif;
   width: 100%;
   top: 0;
   z-index: 1000;
@@ -20,16 +33,16 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.5rem;
   transition: background-color 0.3s;
 }
 
 .topnav a:hover {
-  background-color: #F4CA16;
+  background-color: rgba(0,85,255,1);
 }
 
 .topnav a.active {
-  background-color: #F4CA16;
+  background-color: rgba(0,85,255,1);
   color: white; 
 }
 
@@ -38,17 +51,17 @@ body {
 }
 
 .side, .title {
-  color: white;
+  color: whitesmoke;
   font-family: "Rubik", sans-serif;
-  font-size: 8vw;
+  font-size: 5.5rem;
   margin: 0;
   width: 70vw;
 }
 
 .side {
-  height: 70vh;
+  height: 95vh;
   width: 100%;
-  border-bottom: solid 4px #B7AD99;
+  /*border-bottom: solid 16px rgba(7,7,9,1);*/
 
   display: grid;
   place-items: center;
@@ -58,26 +71,27 @@ body {
 }
 
 .title {
+  font-family: "Rubik", sans-serif;
   margin: 0px 15vw;
+  /*text-shadow: 0 0 40px rgba(0,85,255,1);*/
 }
 
 #background1 {
-  background-color: #F4CA16;
+  background-image: linear-gradient( 288deg,  rgba(0,85,255,1) 1.5%, rgba(4,56,115,1) 91.6% );
   z-index: 2;
+  /*border-right: 16px solid rgba(7,7,9,1);
+  border-bottom: 16px solid rgba(7,7,9,1);*/
+  border-radius: 20px;
 }
 
-#background2 {
-  background-color: #292626;
-}
 
 .bg {
-  background-image: url('./images/road.jpg');
+  /*background-image: url('./images/road.jpg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center;*/
   height: 250px;
-  padding-top: 125vh;
+  padding-top: 30vh;
   margin-top: 60vh;
-  border-bottom: 4px solid #B7AD99;
 }
 
 .container {
@@ -87,42 +101,101 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 36px;
+  color: whitesmoke;
+  font-family: "Rubik", sans-serif;
+  font-size: 2.5rem;
   text-decoration: underline;
-  transform: translateY(-80vh);
+  padding-top: 95vh;
 }
 
-.content {
+/*.content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: relative;
-  color: rgb(0, 0, 0);
-  font-size: 24px;
-  background-color: #ffffff;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  background-color: #1b1818;
   border-radius: 18px;
-  opacity: 70%;
-  margin: 10px 160px;
-  transform: translateY(-80vh);
-  padding: 20px; 
+  padding: 20px;
+  margin: 20px;
 }
-
-.side-img {
-  width: 150px; 
-  height: auto;
-  border-radius: 100px; 
-  margin-right: 20px; 
+.content1 {
+  flex:1;
+  margin-right: 20px;
 }
+.content1 p {
+  padding: 20px;
+}
+.image img {
+  max-width: 100%;
+  height: 30vh;
+  display: block;
+  border-radius: 50%;
+}
+  */
+  .content {  
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;  
+    grid-template-areas: 
+    "Bio Bio Skills"
+    "Bio Bio Skills"; 
+    color: whitesmoke;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5rem;
+    
+  }
+  
+  .Bio { 
+    grid-area: Bio; 
+    padding: 20px;
+    margin: 40px;
+    z-index: 1;
+    position: relative;
+    background-color: rgba(27,24,113,1);
+    border-radius: 20px;
+  }
 
+  .Bio::before {
+    content: '';
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(5, 5, 39);
+    border-radius: 20px;
+    z-index: -1;
+  }
+  .Bio p {
+    margin: 20px;
+  }
 
+  .Skills { 
+    grid-area: Skills;
+  }
+
+  .Skills h2 {
+    text-align: center;
+    text-decoration: underline;
+  }
+  .Skills img {
+    height: 10vh;
+    margin: 20px;
+    padding: 5px;
+  }
 
 .projects {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 36px;
+  font-family: "Rubik", sans-serif;
+  font-size: 2.5rem;
   text-decoration: underline;
 }
 
@@ -139,7 +212,7 @@ body {
   position: relative;
   width: 500px;
   height: 600px;
-  background-color: rgb(27, 24, 24);
+  background-color: rgba(7,7,9,1);
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -163,21 +236,23 @@ body {
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px black;
+  box-shadow: 0 20px 15px rgba(27,24,113,1);
   transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /*Images*/
 .card1::before {
   background-image: url(images/justanormalconvo.png);
-  border-bottom: solid 1mm #322f2f;
 }
 .card2::before {
   background-image: url(images/nextlevelintramurals.png);
-  border-bottom: solid 1mm #322f2f;
+}
+.card3::before {
+  background-image: url(images/cityscope.png);
 }
 
 .card-content {
+  font-family: "Rubik", sans-serif;
   color: white;
   position: relative;
   z-index: 2;
@@ -187,14 +262,14 @@ body {
 
 .card-content p {
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .card-button {
   display: inline-block;
   padding: 10px 50px;
   margin-top: 10px;
-  background-color: #F4CA16;
+  background-color: rgba(27,24,113,1);
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -202,32 +277,37 @@ body {
 }
 
 .card-button:hover {
-  background-color: #B7AD99;
+  background-color: rgba(0,85,255,1);
 }
 
+@keyframes bg-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /* Media queries for responsiveness */
 @media (max-width: 1100px) {
-  .about {
-    transform: translateY(-93vh);
-  }
   
   .content {
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 40px;
-    transform: translateY(-93vh); /* Adjust transform for smaller screens */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "Bio"
+    "Skills"; 
   }
-
-  .side-img {
-    width: 100px; 
-    margin-bottom: 5px; 
-    margin-right: 0;
+  .Skills img {
+    height: 10vh;
+    margin: 5px;
   }
 
   .content p {
-    margin-top: 10px;
-    font-size: 18px;
-    text-align: center; 
+    margin-top: 10px; 
   }
   .card {
     width: 370px;
@@ -243,8 +323,16 @@ body {
 
 @media (max-width: 480px) {
 
-  .content {
-    font-size: 18px;
+  .topnav-left a {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+ 
+  .title {
+    font-size: 10vw;
+  }
+  .content p {
+    font-size: 1rem;
   }
 
   .side-img {
