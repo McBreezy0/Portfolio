@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.575fb510.css",
-    "main.js": "/Portfolio/static/js/main.34bdb8e9.js",
+    "main.css": "/Portfolio/static/css/main.2ffc844c.css",
+    "main.js": "/Portfolio/static/js/main.a807c175.js",
     "static/js/453.b9b9a0a5.chunk.js": "/Portfolio/static/js/453.b9b9a0a5.chunk.js",
+    "static/media/cityscope.png": "/Portfolio/static/media/cityscope.708c5a25c9bc98c64952.png",
     "static/media/nextlevelintramurals.png": "/Portfolio/static/media/nextlevelintramurals.329b8a2ab8c89b5b6394.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/Portfolio/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/road.jpg": "/Portfolio/static/media/road.36732ef7d33936c3db11.jpg",
     "static/media/justanormalconvo.png": "/Portfolio/static/media/justanormalconvo.687612bd63661476b7d0.png",
     "static/media/fontawesome-webfont.eot": "/Portfolio/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/Portfolio/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/Portfolio/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/Portfolio/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/css_logo.png": "/Portfolio/static/media/css_logo.bb6c531e7151246fcfdc.png",
+    "static/media/python_logo.png": "/Portfolio/static/media/python_logo.632369df831d16241b59.png",
+    "static/media/javascript_logo.png": "/Portfolio/static/media/javascript_logo.266bd9fb2663dcc057b4.png",
+    "static/media/java_logo.png": "/Portfolio/static/media/java_logo.6c64373d3b7415758078.png",
     "index.html": "/Portfolio/index.html",
-    "main.575fb510.css.map": "/Portfolio/static/css/main.575fb510.css.map",
-    "main.34bdb8e9.js.map": "/Portfolio/static/js/main.34bdb8e9.js.map",
+    "main.2ffc844c.css.map": "/Portfolio/static/css/main.2ffc844c.css.map",
+    "main.a807c175.js.map": "/Portfolio/static/js/main.a807c175.js.map",
     "453.b9b9a0a5.chunk.js.map": "/Portfolio/static/js/453.b9b9a0a5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.575fb510.css",
-    "static/js/main.34bdb8e9.js"
+    "static/css/main.2ffc844c.css",
+    "static/js/main.a807c175.js"
   ]
 }
